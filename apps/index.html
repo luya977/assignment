@@ -31,17 +31,51 @@
         <div class="row mt-3">
             <div class="col-md-4">
                 <h5 class="text-center text-muted">Application List</h5>
+
                 <div class="list-group">
-                    <a href="http://10.10.21.187:1010" class="list-group-item list-group-item-action">1. Internal Website Test</a>
-                    <a href="http://10.10.21.187:1020" class="list-group-item list-group-item-action">2. ICT System</a>
-                    <a href="http://10.10.21.187:9065" class="list-group-item list-group-item-action">3. Server Monitoring</a>
+                    <a onclick="show('website') " class=" list-group-item list-group-item-action ">1. Internal Website Test</a>
+                    <a onclick="show( 'ict') " class="list-group-item list-group-item-action ">2. ICT System</a>
+                    <a onclick="show( 'server') " class="list-group-item list-group-item-action ">3. Server Monitoring</a>
                 </div>
             </div>
-            <div class="col-md-8">
-                <h5 class="text-center text-muted">Application Preview</h5>
+
+            <div class="col-md-8 ">
+                <h5 class="text-center text-muted ">Application Preview</h5>
+
+                <div class="w-100 text-center ">
+                    <img id="image " src=" " /> <br><br>
+                    <a id="myRoute " href=" " target="_blank" class="btn btn-sm btn-outline-primary mt-4 "></a>
+
+                </div>
             </div>
         </div>
-    </div>
+
+        <script>
+            function show(ref) {
+                console.log(ref);
+                let image = document.getElementById("image ");
+                let myRoute = document.getElementById("myRoute ");
+
+                if (ref == 'website') {
+                    image.src = "./images/website-logo.png ";
+                    myRoute.href = "http://10.10.21.187:1010 ";
+                    myRoute.innerText = "Open Internal Website ";
+                } else
+                if (ref == 'ict') {
+                    image.src = "./images/ict.jpg ";
+                    myRoute.href = "http://10.10.21.187:1020 ";
+                    myRoute.innerText = "Open ICT System ";
+
+                } else if (ref == 'server') {
+                    image.src = "./images/server.jpg ";
+                    myRoute.href = "http://10.10.21.187:9065 ";
+                    myRoute.innerText = "Open Server Management "
+                }
+
+
+            }
+        </script>
+
 </body>
 
 </html>
