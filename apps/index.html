@@ -7,49 +7,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Applications List</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-</head>
 
-<body>
+</head>
+<!-- <body style="background-color:rgba(29, 37, 82, 0.938);">-->
+
+<body class="has-bg-img">
+
+
     <style>
         .pointer {
             cursor: pointer !important;
         }
+        
+        .has-bg-img {
+            background-image: url('./images/back2.jpg');
+        }
     </style>
     <nav>
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link disabled" href="/">Development Server Application Dashboard</a>
+        <ul class=" nav nav-tabs ">
+            <li class="nav-item ">
+                <a class="nav-link disabled " href="/ ">Development Server Application Dashboard</a>
             </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link" href=target_blank>About</a>
+            <!-- <li class="nav-item ">
+                <a class="nav-link " href=target_blank>About</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href=target_blank>Services</a>
+            <li class="nav-item ">
+                <a class="nav-link " href=target_blank>Services</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link active" href=target_blank>Apps</a>
+            <li class="nav-item ">
+                <a class="nav-link active " href=target_blank>Apps</a>
             </li> -->
         </ul>
     </nav>
-    <div class="container ">
-        <h1 class="text-center">Choose an application below:</h1>
-        <div class="row mt-3">
-            <div class="col-md-4">
-                <h5 class="text-center text-muted">Application List</h5>
 
-                <div class="list-group">
-                    <a onclick="show('website') " class="pointer list-group-item list-group-item-action ">1. Internal Website Test</a>
+
+    <div class="container ">
+
+        <h1 class="text-center text-blue ">Choose an application below:</h1>
+        <div class="row mt-3 ">
+            <div class="col-md-4 ">
+                <h3 class="text-center text-muted ">Application List</h3>
+
+                <div class="list-group ">
+                    <a onclick="show( 'website') " class="pointer list-group-item list-group-item-action ">1. Internal Website Test</a>
                     <a onclick="show( 'ict') " class="pointer list-group-item list-group-item-action ">2. ICT System</a>
                     <a onclick="show( 'server') " class="pointer list-group-item list-group-item-action ">3. Server Monitoring</a>
                 </div>
             </div>
 
             <div class="col-md-8 ">
-                <h5 class="text-center text-muted ">Application Preview</h5>
+                <h3 class="text-center text-muted ">Application Preview</h3>
 
                 <div class="w-100 text-center ">
-                    <img id="image " src=" " /> <br><br>
-                    <a id="myRoute " href=" " target="_blank" class="btn btn-sm btn-outline-primary mt-4 "></a>
+                    <img id="image " src=" " width="600 " height="400 " />
+                    <style>
+                        img {
+                            border: 5px solid whitesmoke;
+                        }
+                    </style><br><br>
+                    <a id="myRoute " href=" " target="_blank " class="btn btn-lg btn-outline-primary mt-4 "></a>
 
                 </div>
             </div>
@@ -60,7 +76,6 @@
                 console.log(ref);
                 let image = document.getElementById("image ");
                 let myRoute = document.getElementById("myRoute ");
-
                 if (ref == 'website') {
                     image.src = "./images/website.png ";
                     myRoute.href = "http://10.10.21.187:1010 ";
@@ -82,5 +97,7 @@
         </script>
 
 </body>
+
+</html>
 
 </html>
