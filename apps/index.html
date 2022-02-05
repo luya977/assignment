@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Applications List</title>
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
 </head>
@@ -51,7 +52,7 @@
                 <div class="list-group ">
                     <a onclick="show( 'website') " class="pointer list-group-item list-group-item-action ">1. Internal Website Test</a>
                     <a onclick="show( 'ict') " class="pointer list-group-item list-group-item-action ">2. ICT System</a>
-                    <a onclick="show( 'server') " class="pointer list-group-item list-group-item-action ">3. Server Monitoring</a>
+                    <a onclick="show( 'student') " class="pointer list-group-item list-group-item-action ">3. Student Management</a>
                 </div>
             </div>
 
@@ -65,7 +66,7 @@
                             border: 5px solid whitesmoke;
                         }
                     </style><br><br>
-                    <a id="myRoute " href=" " target="_blank " class="btn btn-lg btn-outline-primary mt-4 "></a>
+                    <a id="myRoute " href=" " style="border: 1px solid; display: none;" target="_blank " class="btn btn-lg btn-outline-primary mt-4 "></a>
 
                 </div>
             </div>
@@ -73,7 +74,7 @@
 
         <script>
             function show(ref) {
-                console.log(ref);
+                // console.log(ref);
                 let image = document.getElementById("image ");
                 let myRoute = document.getElementById("myRoute ");
                 if (ref == 'website') {
@@ -86,12 +87,13 @@
                     myRoute.href = "http://10.10.21.187:1020 ";
                     myRoute.innerText = "Open ICT System ";
 
-                } else if (ref == 'server') {
-                    image.src = "./images/server.png ";
-                    myRoute.href = "http://10.10.21.187:9065 ";
-                    myRoute.innerText = "Open Server Management "
+                } else if (ref == 'student') {
+                    image.src = "./images/student.png ";
+                    myRoute.href = "http://10.10.21.187:1030 ";
+                    myRoute.innerText = "Open Student Management "
                 }
 
+                myRoute.style.display = 'unset';
 
             }
         </script>
